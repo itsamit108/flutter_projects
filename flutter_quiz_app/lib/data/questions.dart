@@ -55,7 +55,6 @@ const questions = [
       'By calling updateState()',
     ],
   ),
-  // Additional questions
   QuizQuestion(
     'What\'s the purpose of the main() function in a Flutter app?',
     [

@@ -1,8 +1,8 @@
+import 'package:expense_tracker/models/expense.dart';
 import 'package:expense_tracker/widgets/chart/chart.dart';
 import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
-import 'package:expense_tracker/models/expense.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -67,9 +67,7 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context)
-        .size
-        .width; //used to check the size of the current device width
+    final width = MediaQuery.of(context).size.width;
     Widget mainContent = const Center(
       child: Text("NO EXPENSES YET"),
     );
@@ -95,7 +93,6 @@ class _ExpensesState extends State<Expenses> {
       body: width < 600
           ? Column(
               children: [
-                //Toolbar with the add button
                 Chart(expenses: _registeredExpenses),
                 Expanded(
                   child: mainContent,

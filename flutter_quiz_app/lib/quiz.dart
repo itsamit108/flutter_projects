@@ -45,7 +45,7 @@ class _QuizState extends State<Quiz> {
 
     if (activeScreen == 'question-screen') {
       screenWidget = QuestionScreen(onSelectAnswer: chooseAnswer);
-    } // Another method to render other than ternary operator
+    }
 
     if (activeScreen == 'results-screen') {
       screenWidget = ResultsScreen(chosenAnswer: selectedAnswer, restartQuiz);

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; //lock the orientation
 import 'package:expense_tracker/widgets/expenses.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 var kColorScheme =
     ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 96, 59, 181));
@@ -13,7 +13,6 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
-    //function used to lock the orientation
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]).then(
@@ -64,7 +63,7 @@ void main() {
                       color: kColorScheme.onSecondaryContainer),
                 ),
           ),
-          themeMode: ThemeMode.system, //default
+          themeMode: ThemeMode.system,
           home: const Expenses(),
         ),
       );
